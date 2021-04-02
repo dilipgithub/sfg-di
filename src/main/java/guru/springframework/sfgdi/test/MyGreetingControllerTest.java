@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import guru.springframework.sfgdi.controller.PropertyInjectedController;
+import guru.springframework.sfgdi.service.PropertyInjectedGreetingService;
 import guru.springframework.sfgdi.service.SetterInjectedGreetingService;
 
 
@@ -19,7 +20,7 @@ public class MyGreetingControllerTest {
 	@Before
 	public void setUp(){
 		controller = new PropertyInjectedController();
-		controller.greetingService = new SetterInjectedGreetingService();
+		controller.greetingService = new PropertyInjectedGreetingService();
 	}
 
 	@Test
